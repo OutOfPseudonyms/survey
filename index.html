@@ -1,38 +1,85 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Survey</title>
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="js/jquery-3.5.1.js"></script>
-  <script src="js/scripts.js"></script>
+  <head>
+    <title>Survey</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/scripts.js"></script>
 </head>
-<body>
-  <h1>Survey</h1>
-  <div id="form">
-    <form id="formOne">
-      <div class="form-group">
-        <label for="name">What is your name?</label>
-        <input id="name" class="form-control" type="text">
+  <body>
+    <div class="container">
+      <h1>Survey</h1>
+      <div id="form">
+        <form id="formOne">
+          <div class="form-group">
+            <label for="name">What is your name?</label>
+            <input id="name" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="born">Date of birth:</label>
+            <input id="born" class="form-control" type="date">
+          </div>
+          <div class="form-group">
+            <label for="favoriteFood">What is your favorite food?</label>
+              <select class="form-control" id="favoriteFood">
+                <option>Italian</option>
+                <option>Chinese</option>
+                <option>Junk food</option>
+                <option>Health food</option>
+              </select>
+          </div>
+          <label for="radio-group">What is your favorite music?</label>
+          <div class="radio form-group" id="radio-group">
+            <label>
+              <input type="radio" name="favoriteMusic" value="rock" checked>
+              Rock
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="favoriteMusic" value="classical">
+              Classical
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="favoriteMusic" value="pop">
+              Pop
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="favoriteMusic" value="country">
+              Country
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio"name="favoriteMusic" value="rap">
+              Rap
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="favoriteMusic" value="world">
+              World
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="favoriteColor">What is your favorite color?</label>
+            <input id="favoriteColor" class="form-control" type="color">
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="date">Date</label>
-        <input id="date" class="form-control" type="text">
-      </div>
-      <div class="form-group">
-        <select class="form-control" id="favoriteFood">
-          <option>Italian</option>
-          <option>Chinese</option>
-          <option>Junk food</option>
-          <option>Health food</option>
-        </select>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="favoriteMusic" value=""
-      </div>
-      <div class="form-group">
       
+      <div id="survey">
+        <h1>Survey Received</h1>
+        <p>
+          User's name is <span class="name"></span>, their date of birth is <span class="born"></span>, their favorite food is <span class="favoriteFood"></span>, the music they prefer to listen to is <span class="favoriteMusic"></span>, and their favorite color is <span class="favoriteColor"></span>.
+        </p>
       </div>
-</body>
+    </div>
+  </body>
 </html>
